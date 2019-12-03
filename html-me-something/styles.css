@@ -20,8 +20,20 @@ body {
     color: #ffffff;
 }
 
+h1, h2 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
 h1 {
     color: #FF6663;
+    text-align: center;
+    font-size: 270%;
+}
+
+h2 {
+    font-size: 150%;
+    /* text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc; */
+    /* color: ; */
 }
 
 a {
@@ -32,10 +44,26 @@ a {
 
 a:hover {
     color: #c4caab;
-    text-decoration: overline underline;
+    text-decoration: overline;
+    text-shadow:1px 1px 5px #E0FF4f;
     text-decoration-style: dotted;
 }
 
 img {
     width:500px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 5em;
+    /* display: block; */
+}
+
+.subtitle {
+    color: #370031;
+    margin-bottom: 3em;
+}
+
+#navsubtitle {
+    text-align: center;
 }
