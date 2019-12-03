@@ -1,0 +1,41 @@
+html {
+	margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+	}
+
+p { 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+	text-align: justify;
+	}
+
+body {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: #4F5D75;
+	font-size: 100%;
+    color: #ffffff;
+}
+
+h1 {
+    color: #FF6663;
+}
+
+a {
+    color: #E0FF4f;
+    font-size: 120%;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: #c4caab;
+    text-decoration: overline underline;
+    text-decoration-style: dotted;
+}
+
+img {
+    width:500px;
+}
