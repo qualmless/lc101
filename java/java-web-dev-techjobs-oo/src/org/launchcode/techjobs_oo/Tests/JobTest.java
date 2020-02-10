@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.launchcode.techjobs_oo.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class JobTest {
     Job test_job1;
@@ -42,6 +43,8 @@ public class JobTest {
     //TODO: Test the equals Method
     @Test
     public void testJobsForEquality(){
-
+        Job test_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job test_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertFalse(test_job4.equals(test_job5));
     }
 }
