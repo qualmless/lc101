@@ -47,4 +47,17 @@ public class JobTest {
         Job test_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(test_job4.equals(test_job5));
     }
+
+    //TODO: test if stringing job class works
+    @Test
+    public void testToString() {
+        Job test_job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        String testJob6String = test_job6.toString();
+        assertEquals("\nID: 3\n" +
+                "Name: Product tester\n" +
+                "Employer: ACME\n" +
+                "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+                "Core Competency: Data Not Available\n", testJob6String);
+    }
 }

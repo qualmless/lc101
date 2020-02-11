@@ -22,7 +22,7 @@ public class Job {
     }
 
     public Job (String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
-//        this();
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -44,6 +44,18 @@ public class Job {
                 Objects.equals(location, job.location) &&
                 Objects.equals(positionType, job.positionType) &&
                 Objects.equals(coreCompetency, job.coreCompetency);
+    }
+
+    public String toString(){
+        String objectToString;
+        objectToString = "\nID: " + this.id + "\n" +
+                "Name: " + this.name + "\n" +
+                "Employer " + this.employer + "\n" +
+                "Location: " + this.location + "\n" +
+                "Position Type: " + this.positionType + "\n" +
+                "Core Competency: " + this.coreCompetency + "\n";
+
+        return objectToString;
     }
 
     @Override
