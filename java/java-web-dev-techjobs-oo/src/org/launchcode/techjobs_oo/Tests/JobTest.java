@@ -51,13 +51,26 @@ public class JobTest {
     //TODO: test if stringing job class works
     @Test
     public void testToString() {
-        Job test_job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        Job test_job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String testJob6String = test_job6.toString();
         assertEquals("\nID: 3\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
                 "Position Type: Quality control\n" +
-                "Core Competency: Data Not Available\n", testJob6String);
+                "Core Competency: Persistence\n", testJob6String);
+    }
+
+    //TODO: test if data not available shows
+    @Test
+    public void testAllFields(){
+        Job test_job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        String testJob7String = test_job7.toString();
+        assertEquals("\nID: 3\n" +
+                "Name: Product tester\n" +
+                "Employer: ACME\n" +
+                "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+                "Core Competency: Data Not Available\n", testJob7String);
     }
 }

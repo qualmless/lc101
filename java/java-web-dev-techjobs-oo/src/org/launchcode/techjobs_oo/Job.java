@@ -48,9 +48,24 @@ public class Job {
 
     public String toString(){
         String objectToString;
+        if (this.name.equals("")) {
+            this.name = "Data Not Available";
+        }
+        if (this.employer.toString().equals("")) {
+            this.employer.setValue("Data Not Available");
+        }
+        if (this.location.toString().equals("")) {
+            this.location.setValue("Data Not Available");
+        }
+        if (this.positionType.toString().equals("")) {
+            this.positionType.setValue("Data Not Available");
+        }
+        if (this.coreCompetency.toString().equals("")) {
+            this.coreCompetency.setValue("Data Not Available");
+        }
         objectToString = "\nID: " + this.id + "\n" +
                 "Name: " + this.name + "\n" +
-                "Employer " + this.employer + "\n" +
+                "Employer: " + this.employer + "\n" +
                 "Location: " + this.location + "\n" +
                 "Position Type: " + this.positionType + "\n" +
                 "Core Competency: " + this.coreCompetency + "\n";
