@@ -4,8 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.launchcode.techjobs_oo.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JobTest {
     Job test_job1;
@@ -53,7 +52,7 @@ public class JobTest {
     public void testToString() {
         Job test_job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String testJob6String = test_job6.toString();
-        assertEquals("\nID: 3\n" +
+        assertEquals("\nID: 9\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -66,11 +65,18 @@ public class JobTest {
     public void testAllFields(){
         Job test_job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
         String testJob7String = test_job7.toString();
-        assertEquals("\nID: 3\n" +
+        assertEquals("\nID: 12\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
                 "Position Type: Quality control\n" +
                 "Core Competency: Data Not Available\n", testJob7String);
+    }
+
+//    //TODO: test if starts and ends with return
+    @Test
+    public void testStartsEnds(){
+        Job test_job8 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        assertTrue(test_job8.toString().startsWith("\n")&& test_job8.toString().endsWith("\n"));
     }
 }
